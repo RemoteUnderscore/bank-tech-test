@@ -1,5 +1,10 @@
 class BankAccount
   def initialize
-    account = 0
+
   end
+
+  def balance
+    balance = 0
+  end
+  
 end
