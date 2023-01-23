@@ -33,4 +33,12 @@ RSpec.describe 'bankaccount' do
         expect(account.statement).to eq(500)
     end
   end
+
+  context 'if you have less than zero in your account' do
+    it 'will return a warning' do
+      account = BankAccount.new
+        account.withdraw(500)
+        expect(account.statement).to eq('You are overdrawn')
+    end
+  end
 end

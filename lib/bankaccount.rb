@@ -9,9 +9,15 @@ class BankAccount
 
   def withdraw(spend)
     @balance -= spend
+
   end
 
   def statement
-    return @balance
+    if @balance < 0
+      return 'You are overdrawn'
+    else
+      return @balance
+    end
   end
+
 end
