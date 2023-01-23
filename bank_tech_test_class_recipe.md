@@ -14,9 +14,11 @@ As a user
 So that I can keep track of my finances overall
 I want to be able to view my bank account statement when I need to.
 
-## 2. Design the Class Interface
+As a user
+If I don't have enough cash to withdraw
+I don't want the account to go into an overdraft.
 
-_Include the initializer and public methods with all parameters and return values._
+## 2. Design the Class Interface
 
 ```ruby
 
@@ -41,7 +43,7 @@ end
 
 ```
 ## 3. Create Examples as Tests
-_Make a list of examples of how the class will behave in different situations._
+
 ```ruby
 # EXAMPLE
 
