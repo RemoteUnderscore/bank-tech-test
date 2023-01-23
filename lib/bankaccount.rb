@@ -1,19 +1,17 @@
 class BankAccount
   def initialize
-    @balance = []
+    @balance = 0
   end
 
-  def statement
-    return @balance.sum
-  end
-
-  def deposit(amount)
-    @balance << amount
+  def deposit(save)
+    @balance += save
   end
 
   def withdraw(spend)
-    fail 'You cannot withdraw more than you have in your account!' unless @balance.sum >= spend
-    @balance.sum - spend
-    
+    @balance -= spend
+  end
+
+  def statement
+    return @balance
   end
 end

@@ -8,7 +8,7 @@ RSpec.describe 'bankaccount' do
     end
   end
 
-  context 'when you deposit 1000 cash' do
+  context 'when you deposit 1000' do
     it 'returns 1000' do
       account = BankAccount.new
       account.deposit(1000)
@@ -22,6 +22,15 @@ RSpec.describe 'bankaccount' do
       account.deposit(1000)
       account.deposit(2000)
       expect(account.statement).to eq(3000)
+    end
+  end
+
+  context 'when you deposit 1000 and withdraw 500' do
+    it 'returns 500' do
+      account = BankAccount.new
+        account.deposit(1000)
+        account.withdraw(500)
+        expect(account.statement).to eq(500)
     end
   end
 end
