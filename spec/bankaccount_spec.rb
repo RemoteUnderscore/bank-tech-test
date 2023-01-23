@@ -15,4 +15,13 @@ RSpec.describe 'bankaccount' do
       expect(account.statement).to eq(1000)
     end
   end
+  
+  context 'when you deposit two separate amounts of 1000 and 2000' do
+    it 'returns 3000' do
+      account = BankAccount.new
+      account.deposit(1000)
+      account.deposit(2000)
+      expect(account.statement).to eq(3000)
+    end
+  end
 end
