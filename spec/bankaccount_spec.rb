@@ -50,4 +50,11 @@ RSpec.describe 'bankaccount' do
         expect(account.statement).to eq('You are overdrawn')
     end
   end
+
+  context 'when you request a statement' do
+    it 'will initially return a header' do
+      account = BankAccount.new
+        expect(account.print_statement).to eq('date || credit || debit || balance')
+    end
+  end
 end

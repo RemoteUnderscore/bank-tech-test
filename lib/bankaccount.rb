@@ -18,4 +18,12 @@ class BankAccount
       return @balance
     end
   end
+
+  def print_statement
+    header
+  end
+
+  def header
+    return 'date || credit || debit || balance'
+  end
 end
