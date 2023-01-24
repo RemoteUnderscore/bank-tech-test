@@ -9,7 +9,6 @@ class BankAccount
 
   def withdraw(spend)
     @balance -= spend
-
   end
 
   def statement
@@ -19,5 +18,4 @@ class BankAccount
       return @balance
     end
   end
-
 end
